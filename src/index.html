@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz</title>
-</head>
-<body>
-  
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz</title>
+    </head>
+    <body>
+        <div class="container">
+            <main class="main">
+                <h1 class="title">Тестирование</h1>
+                <fieldset class="quiz">
+                    <h2 class="quiz__title">Что такое операционная система?</h2>
+                    <fieldset class="quiz__block">
+                        <input
+                            class="quiz__answer"
+                            type="radio"
+                            name="question"
+                            id="q1"
+                        />
+                        <label class="quiz__question" for="q1">
+                            Это просто программа на компьютере, как и другие -
+                            Word или Chrome.
+                        </label>
+                    </fieldset>
+                    <fieldset class="quiz__block">
+                        <input
+                            class="quiz__answer"
+                            type="radio"
+                            name="question"
+                            id="q2"
+                        />
+                        <label class="quiz__question" for="q2">
+                            Это показатель того, какой процессор используется на
+                            компьютере. Например, 32-битный или 64-битный.
+                        </label>
+                    </fieldset>
+                    <fieldset class="quiz__block">
+                        <input
+                            class="quiz__answer"
+                            type="radio"
+                            name="question"
+                            id="q3"
+                        />
+                        <label class="quiz__question" for="q3">
+                            Это набор взаимосвязанных программ, осуществляющих
+                            управление компьютером и взаимодействие с
+                            пользователем.
+                        </label>
+                    </fieldset>
+                    <fieldset class="quiz__block">
+                        <input
+                            class="quiz__answer"
+                            type="radio"
+                            name="question"
+                            id="q4"
+                        />
+                        <label class="quiz__question" for="q4">
+                            Нет такого понятия, есть понятие "файловая система".
+                        </label>
+                    </fieldset>
+                </fieldset>
+            </main>
+        </div>
+    </body>
 </html>

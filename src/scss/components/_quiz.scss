@@ -1,0 +1,69 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: variables.$gap;
+    width: 100%;
+    min-height: 528px;
+    border-radius: variables.$radius;
+    padding: variables.$padding;
+    border: none;
+    background-color: variables.$quiz_bcg_color;
+
+    @media (max-width: variables.$sm_max_width) {
+        min-height: 460px;
+    }
+
+    &__title {
+        @include mixins.h2_text;
+
+        @media (max-width: variables.$sm_max_width) {
+            font-size: 18px;
+        }
+    }
+
+    &__block {
+        position: relative;
+        padding: 0;
+        border: none;
+    }
+
+    &__question {
+        margin-left: 40px;
+    }
+
+    &__question::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid variables.$main_text_color;
+        cursor: pointer;
+        transition: all 0.4s;
+    }
+
+    &__answer {
+        @include mixins.hide;
+    }
+
+    &__answer:checked ~ &__question::before,
+    &__answer:active ~ &__question::before,
+    &__answer:focus ~ &__question::before {
+        border: 1px solid variables.$btn_bcg_color;
+        background-color: variables.$btn_bcg_color;
+    }
+
+    @media (hover: hover) {
+        &__answer:hover ~ &__question::before {
+            border: 1px solid variables.$btn_hover_color;
+            background-color: variables.$btn_hover_color;
+        }
+    }
+}

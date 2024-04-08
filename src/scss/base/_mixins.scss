@@ -1,18 +1,19 @@
 @use './variables';
 
 @mixin h1_text {
+    text-align: center;
     font-size: 48px;
     font-weight: 800;
-    line-height: auto;
+    line-height: 48px;
 }
 
 @mixin h2_text {
     font-size: 24px;
     font-weight: 700;
-    line-height: auto;
+    line-height: 24px;
 }
 
-@mixin h3_text {
+@mixin question_text {
     @include h2_text;
     font-size: 20px;
 }

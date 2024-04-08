@@ -1,0 +1,41 @@
+@use './variables';
+
+@mixin h1_text {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: auto;
+}
+
+@mixin h2_text {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: auto;
+}
+
+@mixin h3_text {
+    @include h2_text;
+    font-size: 20px;
+}
+
+@mixin btn {
+    width: variables.$btn_width;
+    height: variables.$btn_height;
+    border-radius: variables.$btn_radius;
+    border: transparent;
+    background-color: variables.$btn_bcg_color;
+    color: variables.$btn_text_color;
+    cursor: pointer;
+}
+
+@mixin hide {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

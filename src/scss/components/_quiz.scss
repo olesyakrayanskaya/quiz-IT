@@ -10,7 +10,7 @@
     width: 100%;
     min-height: 528px;
     border-radius: variables.$radius;
-    padding: variables.$padding;
+    padding: 50px 40px;
     border: none;
     background-color: variables.$quiz_bcg_color;
 
@@ -34,6 +34,7 @@
 
     &__question {
         margin-left: 40px;
+        display: block;
     }
 
     &__question::before {

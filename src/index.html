@@ -8,8 +8,8 @@
     <body>
         <div class="container">
             <main class="main">
-                <h1 class="title">Тестирование</h1>
-                <fieldset class="quiz">
+                <h1 class="title visually-hidden">Тестирование</h1>
+                <fieldset class="quiz visually-hidden">
                     <h2 class="quiz__title">Что такое операционная система?</h2>
                     <fieldset class="quiz__block">
                         <input
@@ -60,7 +60,7 @@
                         </label>
                     </fieldset>
                 </fieldset>
-                <div class="progress">
+                <div class="progress visually-hidden">
                     <span class="progress__start" aria-hidden="true">0</span>
                     <span class="progress__end" aria-hidden="true">10</span>
                     <div class="progress__indicator">
@@ -72,6 +72,45 @@
                         >
                     </div>
                 </div>
+                <section class="result">
+                    <h1 class="result__title title">Поздравляем!</h1>
+                    <p class="result__description">
+                        Вы правильно ответили на все вопросы. <br />
+                        Вы действительно отлично разбираетесь в IT.
+                    </p>
+                    <ul class="result__list">
+                        <li class="result__item result__item_correct">
+                            <h3 class="result__question">
+                                Что такое операционная система?
+                            </h3>
+                            <p class="result__answer">
+                                Это набор взаимосвязанных программ,
+                                осуществляющих управление компьютером и
+                                взаимодействие с пользователем.
+                            </p>
+                        </li>
+                        <li class="result__item result__item_correct">
+                            <h3 class="result__question">
+                                Что такое операционная система?
+                            </h3>
+                            <p class="result__answer">
+                                Это набор взаимосвязанных программ,
+                                осуществляющих управление компьютером и
+                                взаимодействие с пользователем.
+                            </p>
+                        </li>
+                        <li class="result__item result__item_correct">
+                            <h3 class="result__question">
+                                Что такое операционная система?
+                            </h3>
+                            <p class="result__answer">
+                                Это набор взаимосвязанных программ,
+                                осуществляющих управление компьютером и
+                                взаимодействие с пользователем.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
             </main>
         </div>
     </body>

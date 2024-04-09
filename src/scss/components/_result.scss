@@ -1,0 +1,42 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.result {
+    padding: 80px 0;
+
+    &__description {
+        font-size: 24px;
+        line-height: 140%;
+        margin-top: 5px;
+        margin-bottom: variables.$margin_bottom;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: variables.$gap;
+        list-style: none;
+    }
+
+    &__item {
+        width: 100%;
+        min-height: 163px;
+        padding: variables.$padding;
+        border-radius: variables.$radius;
+    }
+
+    &__item_correct {
+        background-color: variables.$correct_color;
+    }
+
+    &__item_incorrect {
+        background-color: variables.$incorrect_color;
+    }
+
+    &__question {
+        margin-bottom: 15px;
+        @include mixins.question_text;
+    }
+}

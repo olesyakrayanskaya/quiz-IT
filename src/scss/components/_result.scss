@@ -5,6 +5,10 @@
     padding: 80px 0;
     margin: 0 auto;
 
+    @media (max-width: variables.$sm_max_width) {
+        padding: 0;
+    }
+
     &__description {
         font-size: 24px;
         line-height: 140%;
@@ -25,6 +29,10 @@
         min-height: 163px;
         padding: variables.$padding;
         border-radius: variables.$radius;
+
+        @media (max-width: variables.$sm_max_width) {
+            padding: 20px;
+        }    
     }
 
     &__item_correct {

@@ -34,3 +34,9 @@ body {
         padding: 0 variables.$padding;
     }
 }
+
+@media (max-width: variables.$sm_max_width) {
+    body {
+        font-size: 18px;
+    }
+}

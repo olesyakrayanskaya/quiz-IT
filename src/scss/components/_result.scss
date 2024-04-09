@@ -2,11 +2,15 @@
 @use '../base/mixins';
 
 .result {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 80px 0;
     margin: 0 auto;
 
     @media (max-width: variables.$sm_max_width) {
-        padding: 0;
+        padding: 40px 0;
     }
 
     &__description {
@@ -23,6 +27,7 @@
         align-items: flex-start;
         gap: variables.$gap;
         list-style: none;
+        margin-bottom: variables.$margin_bottom;
     }
 
     &__item {

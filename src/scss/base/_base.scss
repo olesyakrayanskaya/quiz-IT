@@ -11,9 +11,14 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden;
+html {
     height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100%;
+    overflow-x: hidden;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: variables.$main_font_size;
     line-height: variables.$main_line_height;
@@ -24,12 +29,12 @@ body {
 
 .container {
     margin: 0 auto;
+    width: 100%;
     max-width: 886px;
 }
 
 @media (max-width: variables.$md_max_width) {
     .container {
-        margin: 0 auto;
         max-width: 100%;
         padding: 0 variables.$padding;
     }

@@ -1,0 +1,32 @@
+@use '../base/variables';
+
+.btn {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: variables.$btn_width;
+    height: variables.$btn_height;
+    border-radius: variables.$btn_radius;
+    border: variables.$btn_bcg_color;
+    background-color: variables.$btn_bcg_color;
+    color: variables.$btn_text_color;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: variables.$btn_hover_color;
+            border: variables.$btn_hover_color;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            background-color: variables.$btn_hover_color;
+            border: variables.$btn_hover_color;
+        }
+    }
+}

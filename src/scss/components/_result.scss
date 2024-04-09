@@ -2,15 +2,15 @@
 @use '../base/mixins';
 
 .result {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 80px 0;
+    padding-bottom: 80px;
     margin: 0 auto;
 
-    @media (max-width: variables.$sm_max_width) {
-        padding: 40px 0;
+    &__title {
+        padding-bottom: 20px;
     }
 
     &__description {
@@ -32,6 +32,7 @@
 
     &__item {
         min-height: 163px;
+        width: 100%;
         padding: variables.$padding;
         border-radius: variables.$radius;
 

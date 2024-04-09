@@ -8,6 +8,7 @@
     align-items: flex-start;
     gap: variables.$gap;
     width: 100%;
+    min-height: 528px;
     border-radius: variables.$radius;
     padding: 45px 40px;
     margin-bottom: variables.$margin_bottom;
@@ -15,10 +16,11 @@
     background-color: variables.$quiz_bcg_color;
 
     @media (max-width: variables.$sm_max_width) {
+        min-height: 460px;
         padding: 30px 24px;
     }
 
-    &__title {
+    &__question {
         @include mixins.h2_text;
 
         @media (max-width: variables.$sm_max_width) {
@@ -32,12 +34,12 @@
         border: none;
     }
 
-    &__question {
+    &__answer {
         margin-left: 40px;
         display: block;
     }
 
-    &__question::before {
+    &__answer::before {
         position: absolute;
         top: 0;
         left: 0;
@@ -50,15 +52,15 @@
         transition: all 0.4s;
     }
 
-    &__answer:checked ~ &__question::before,
-    &__answer:active ~ &__question::before,
-    &__answer:focus ~ &__question::before {
+    &__radio:checked ~ &__answer::before,
+    &__radio:active ~ &__answer::before,
+    &__radio:focus ~ &__answer::before {
         border: 1px solid variables.$btn_bcg_color;
         background-color: variables.$btn_bcg_color;
     }
 
     @media (hover: hover) {
-        &__answer:hover ~ &__question::before {
+        &__radio:hover ~ &__answer::before {
             border: 1px solid variables.$btn_hover_color;
             background-color: variables.$btn_hover_color;
         }

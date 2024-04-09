@@ -50,10 +50,6 @@
         transition: all 0.4s;
     }
 
-    &__answer {
-        @include mixins.hide;
-    }
-
     &__answer:checked ~ &__question::before,
     &__answer:active ~ &__question::before,
     &__answer:focus ~ &__question::before {

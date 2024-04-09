@@ -10,12 +10,14 @@
     width: 100%;
     min-height: 528px;
     border-radius: variables.$radius;
-    padding: 50px 40px;
+    padding: 45px 40px;
+    margin-bottom: variables.$margin_bottom;
     border: none;
     background-color: variables.$quiz_bcg_color;
 
     @media (max-width: variables.$sm_max_width) {
         min-height: 460px;
+        padding: 30px 24px;
     }
 
     &__title {

@@ -1,0 +1,40 @@
+@use '../base/variables';
+
+.progress {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  border-radius: 99px;
+  background-color: variables.$quiz_bcg_color;
+
+  &__start {
+    position: absolute;
+    top: -22px;
+    left: 0;
+    font-weight: 700;
+  }
+
+  &__end {
+    position: absolute;
+    top: -22px;
+    right: 0;
+    font-weight: 700;
+  }
+
+  &__ready {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    font-weight: 700;
+  }
+
+  &__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 286px;
+    height: 12px;
+    border-radius: inherit;
+    background-color: variables.$btn_bcg_color;
+  }
+}

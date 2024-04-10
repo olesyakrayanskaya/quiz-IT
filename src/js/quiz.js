@@ -61,6 +61,11 @@ function createAnswer(id, text, q, correctAnswerId) {
         removeAllChildNodes(quiz);
         askQuestion();
         progress();
+        quiz.classList.remove('animated-translate');
+        quiz.classList.add('animated');
+    });
+    quizRadio.addEventListener('click', () => {
+        quiz.classList.remove('animated');
     });
 }
 
@@ -149,6 +154,7 @@ function createResults(results) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    quiz.classList.add('animated-translate');
     totalCountSpan.innerHTML = [...dataQuestions].length;
     askQuestion();
 });

@@ -19,6 +19,7 @@ html {
 body {
     min-height: 100%;
     overflow-x: hidden;
+    overflow-y: scroll;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: variables.$main_font_size;
     line-height: variables.$main_line_height;

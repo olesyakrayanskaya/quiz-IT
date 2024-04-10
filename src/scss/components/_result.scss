@@ -8,6 +8,32 @@
     align-items: flex-start;
     padding-bottom: 80px;
     margin: 0 auto;
+    -webkit-animation-name: result-animation;
+    animation-name: result-animation;
+    -webkit-animation-duration: 1.3s;
+    animation-duration: 1.3s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+
+    @-webkit-keyframes result-animation {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes result-animation {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
 
     &__title {
         padding-bottom: 20px;
@@ -38,7 +64,7 @@
 
         @media (max-width: variables.$sm_max_width) {
             padding: 20px;
-        }    
+        }
     }
 
     &__item_correct {

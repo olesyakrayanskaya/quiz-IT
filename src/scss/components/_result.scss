@@ -63,7 +63,8 @@
         border-radius: variables.$radius;
 
         @media (max-width: variables.$sm_max_width) {
-            padding: 20px;
+            padding: variables.$padding_sm;
+            border-radius: variables.$radius_sm;
         }
     }
 

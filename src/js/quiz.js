@@ -1,7 +1,6 @@
 'use strict';
 import { dataQuestions } from '../data';
 import { getRandomElement, removeAllChildNodes, pluralize } from './utils';
-import { createResultsItem } from './result';
 
 const quiz = document.querySelector('.quiz');
 const result = document.querySelector('.result');
@@ -10,10 +9,30 @@ const title = document.querySelector('.title');
 
 const resultSectionTitle = document.querySelector('.result__title');
 const resultSectionDescription = document.querySelector('.result__description');
+const resultsList = document.querySelector('.result__list');
 const resultBtn = document.querySelector('.result__btn');
+
+const totalCountSpan = document.querySelector('.progress__end');
+const readyCountSpan = document.querySelector('.progress__ready');
+const progressIndicator = document.querySelector('.progress__indicator');
+const progressLabel = document.querySelector('.progress__label');
 
 const questions = [...dataQuestions];
 const resultArr = [];
+
+function progress() {
+    totalCountSpan.innerHTML = [...dataQuestions].length;
+    readyCountSpan.innerHTML = resultArr.length;
+    progressLabel.innerHTML = `Вы ответили на ${
+        readyCountSpan.innerHTML
+    } ${pluralize(readyCountSpan.innerHTML, [
+        'вопрос',
+        'вопроса',
+        'вопросов',
+    ])} из ${totalCountSpan.innerHTML}`;
+    let progressIndicatorWidth = `${(Number(readyCountSpan.innerHTML) / Number(totalCountSpan.innerHTML)) * 100}%`;
+    progressIndicator.style.width = progressIndicatorWidth
+}
 
 function createQuestion(text) {
     const question = document.createElement('h2');
@@ -46,6 +65,7 @@ function createAnswer(id, text, q, correctAnswerId) {
         });
         removeAllChildNodes(quiz);
         askQuestion();
+        progress();
     });
 }
 
@@ -72,6 +92,23 @@ function askQuestion() {
         progressBar.style.display = 'none';
         title.style.display = 'none';
     }
+}
+
+function createResultsItem(question, answer, correct) {
+    const resultItem = document.createElement('li');
+    resultItem.classList.add('result__item');
+    correct
+        ? resultItem.classList.add('result__item_correct')
+        : resultItem.classList.add('result__item_incorrect');
+    resultsList.append(resultItem);
+    const resultQuestion = document.createElement('h3');
+    resultQuestion.classList.add('result__question');
+    resultQuestion.innerHTML = question;
+    resultItem.append(resultQuestion);
+    const resultAnswer = document.createElement('p');
+    resultAnswer.classList.add('result__answer');
+    resultAnswer.innerHTML = answer;
+    resultItem.append(resultAnswer);
 }
 
 function createResults(resultArr) {

@@ -503,16 +503,17 @@ body {
   gap: 18px;
   width: 100%;
   min-height: 528px;
-  border-radius: 20px;
+  border-radius: 4px;
   padding: 45px 40px;
   margin-bottom: 40px;
   border: none;
-  background-color: #F7F7F7;
+  background-color: #cfd9ec;
 }
 @media (max-width: 576px) {
   .quiz {
     min-height: 460px;
-    padding: 30px 24px;
+    padding: 20px;
+    border-radius: 2px;
   }
 }
 .quiz__question {
@@ -546,14 +547,26 @@ body {
   cursor: pointer;
   transition: all 0.4s;
 }
+@media (max-width: 576px) {
+  .quiz__answer::before {
+    width: 25px;
+    height: 25px;
+  }
+}
 .quiz__radio:checked ~ .quiz__answer::before, .quiz__radio:active ~ .quiz__answer::before, .quiz__radio:focus ~ .quiz__answer::before {
-  border: 1px solid #3300FF;
-  background-color: #3300FF;
+  border: 1px solid #846ce6;
+  background-color: #846ce6;
 }
 @media (hover: hover) {
   .quiz__radio:hover ~ .quiz__answer::before {
-    border: 1px solid #6475f3;
-    background-color: #6475f3;
+    border: 1px solid #846ce6;
+    background-color: #846ce6;
+  }
+}
+@media (hover: none) {
+  .quiz__radio:active ~ .quiz__answer::before {
+    border: 1px solid #846ce6;
+    background-color: #846ce6;
   }
 }
 
@@ -562,7 +575,7 @@ body {
   width: 100%;
   height: 12px;
   border-radius: 99px;
-  background-color: #F7F7F7;
+  background-color: #cfd9ec;
 }
 .progress__start {
   position: absolute;
@@ -588,7 +601,7 @@ body {
   left: 0;
   height: 12px;
   border-radius: inherit;
-  background-color: #3300FF;
+  background-color: #846ce6;
 }
 
 .result {
@@ -643,18 +656,19 @@ body {
   min-height: 163px;
   width: 100%;
   padding: 40px;
-  border-radius: 20px;
+  border-radius: 4px;
 }
 @media (max-width: 576px) {
   .result__item {
     padding: 20px;
+    border-radius: 2px;
   }
 }
 .result__item_correct {
-  background-color: #E5F5E1;
+  background-color: #b6fa97;
 }
 .result__item_incorrect {
-  background-color: #FFE0E0;
+  background-color: #ffd3d3;
 }
 .result__question {
   margin-bottom: 15px;
@@ -671,9 +685,9 @@ body {
   align-items: center;
   width: 220px;
   height: 54px;
-  border-radius: 10px;
-  border: #3300FF;
-  background-color: #3300FF;
+  border-radius: 2px;
+  border: #846ce6;
+  background-color: #846ce6;
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 700;

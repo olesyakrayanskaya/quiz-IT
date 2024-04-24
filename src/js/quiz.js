@@ -137,7 +137,7 @@ function createResults(results) {
     if (allCorrect) {
         resultSectionTitle.innerHTML = 'Поздравляем!';
         resultSectionDescription.innerHTML =
-            'Вы правильно ответили на все вопросы. <br /> Вы действительно отлично разбираетесь в IT. ';
+            'Вы правильно ответили на все вопросы. <br /> Вы действительно отлично разбираетесь в JS. ';
         resultBtn.style.display = 'none';
     } else if (allIncorrect) {
         resultSectionTitle.innerHTML = 'Упс :(';

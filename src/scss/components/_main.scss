@@ -1,9 +1,9 @@
 @use '../base/variables';
 
 .main {
-    margin: 87px auto 0;
+    padding: 90px 0 0;
 
     @media (max-width: variables.$sm_max_width) {
-        margin: 40px auto 0;
+        padding: 40px 0 0;
     }
 }
